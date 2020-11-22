@@ -84,6 +84,25 @@ Accuracy (`split_data=0.15`):
 - label_encoder + one_hot + std: 0.8477
 
 
+**KNN**
+
+Training and Testing:
+
+```python
+from ml import KNN
+
+KNN.run(x_train, y_train, k=5)  # Training
+prediction = KNN.predict(x_test)  # Testing
+```
+
+Accuracy (`split_data=0.15`):
+
+- label_encoder: 0.7746
+- label_encoder + one_hot: 0.7760
+- label_encoder + std: 0.8219
+- label_encoder + one_hot + std: 0.8223
+
+
 ### Contact
 
 [linkedin.com/in/edvaldo-melo/](https://www.linkedin.com/in/edvaldo-melo/)
