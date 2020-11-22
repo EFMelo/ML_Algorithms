@@ -1,6 +1,7 @@
 from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
 
 
 class NaiveBayes:
@@ -43,3 +44,17 @@ class RandomForest:
     def predict(cls, x_test):
 
         return cls.__rf.predict(x_test)
+
+
+class KNN:
+
+    @classmethod
+    def run(cls, x_train, y_train, k):
+
+        cls.__knn = KNeighborsClassifier(n_neighbors=k)
+        cls.__knn.fit(x_train, y_train)
+    
+    @classmethod
+    def predict(cls, x_test):
+
+        return cls.__knn.predict(x_test)
