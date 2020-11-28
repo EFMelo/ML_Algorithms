@@ -3,6 +3,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
 
 
 class NaiveBayes:
@@ -73,3 +74,17 @@ class LogRegression:
     def predict(cls, x_test):
 
         return cls.__log_regr.predict(x_test)
+
+
+class SVM:
+
+    @classmethod
+    def run(cls, x_train, y_train, c, kernel):
+
+        cls.__svm = SVC(C=c, kernel=kernel, random_state=1)
+        cls.__svm.fit(x_train, y_train)
+    
+    @classmethod
+    def predict(cls, x_test):
+
+        return cls.__svm.predict(x_test)
