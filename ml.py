@@ -2,6 +2,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
 
 
 class NaiveBayes:
@@ -58,3 +59,17 @@ class KNN:
     def predict(cls, x_test):
 
         return cls.__knn.predict(x_test)
+
+
+class LogRegression:
+    
+    @classmethod
+    def run(cls, x_train, y_train):
+
+        cls.__log_regr = LogisticRegression(solver='lbfgs')
+        cls.__log_regr.fit(x_train, y_train)
+    
+    @classmethod
+    def predict(cls, x_test):
+
+        return cls.__log_regr.predict(x_test)
