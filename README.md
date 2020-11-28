@@ -122,6 +122,23 @@ Accuracy (`split_data=0.15`):
 - label_encoder + one_hot + std: 0.8495
 
 
+**SVM**
+
+Training and Testing:
+
+```python
+from ml import SVM
+
+SVM.run(x_train, y_train, c=1, kernel='linear')  # Training
+prediction = SVM.predict(x_test)  # Testing
+```
+
+Accuracy (`split_data=0.15`):
+
+- label_encoder + std: 0.8135
+- label_encoder + one_hot + std: 0.8507
+
+
 ### Contact
 
 [linkedin.com/in/edvaldo-melo/](https://www.linkedin.com/in/edvaldo-melo/)
