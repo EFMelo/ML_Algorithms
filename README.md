@@ -103,6 +103,25 @@ Accuracy (`split_data=0.15`):
 - label_encoder + one_hot + std: 0.8223
 
 
+**Logistic Regression**
+
+Training and Testing:
+
+```python
+from ml import LogRegression
+
+LogRegression.run(x_train, y_train)  # Training
+prediction = LogRegression.predict(x_test)  # Testing
+```
+
+Accuracy (`split_data=0.15`):
+
+- label_encoder: 0.7866
+- label_encoder + one_hot: 0.7948
+- label_encoder + std: 0.8184
+- label_encoder + one_hot + std: 0.8495
+
+
 ### Contact
 
 [linkedin.com/in/edvaldo-melo/](https://www.linkedin.com/in/edvaldo-melo/)
